@@ -14,7 +14,7 @@ try {
     //Server settings
     $mail->SMTPDebug = 1;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
-    $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
+    $mail->Host       = 'tls://smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
     $mail->Username   = 'marinanov040167@gmail.com';                     // SMTP username
     $mail->Password   = 'marinanov';                               // SMTP password
