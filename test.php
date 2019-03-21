@@ -7,7 +7,7 @@ $sendgrid = new SendGrid($key);
 
 echo $key;
 
-$sendgrid = new SendGrid('sendgrid api key');
+$sendgrid = new SendGrid($key);
 $to = "nikitosnov@gmail.com";
 $toName = "nikitosnov@gmail.com";
 $from = "nikitosnov@gmail.com";
@@ -22,7 +22,7 @@ $email
   ->setSubject($subject)
   ->setText('Hello World!')
   ->setHtml($html);
-
+echo "string";
 $sendgrid->send($email);
 
 ?>
