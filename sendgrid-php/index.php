@@ -1,12 +1,12 @@
 <?php
-echo "hi";
+//echo "hi";
 // using SendGrid's PHP Library
 // https://github.com/sendgrid/sendgrid-php
 //require 'vendor/autoload.php'; // If you're using Composer (recommended)
 // Comment out the above line if not using Composer
- /*require("./sendgrid-php.php");
+ require("./sendgrid-php.php");
 // If not using Composer, uncomment the above line
-$email = new \SendGrid\Mail\Mail();
+//$email = new \SendGrid\Mail\Mail();
 $email->setFrom("nikitosnov@gmail.com", "Example User");
 $email->setSubject("Sending with SendGrid is Fun");
 $email->addTo("nikitosnov@gmail.com", "Example User");
@@ -16,7 +16,7 @@ $email->addContent(
 $email->addContent(
     "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
 );
-$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
+//$sendgrid = new \SendGrid(getenv('SENDGRID_API_KEY'));
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
@@ -24,5 +24,6 @@ try {
     print $response->body() . "\n";
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
-}*/
+}
+echo "string";
 ?>
