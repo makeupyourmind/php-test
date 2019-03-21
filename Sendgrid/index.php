@@ -1,12 +1,12 @@
 <?php
-echo getenv('SENDGRID_API_KEY');
+//echo getenv('SENDGRID_API_KEY');
     // You need to install the sendgrid client library so run:
     // composer require sendgrid/sendgrid
-    /*require '/vendor/autoload.php';
+    require '/vendor/autoload.php';
 
     // contains a variable called: $API_KEY that is the API Key.
     // You need this API_KEY created on the Sendgrid website.
-    //include_once('./credentials.php');
+    include_once('./credentials.php');
 
     $FROM_EMAIL = 'nikitosnov@gmail.com';
     // they dont like when it comes from @gmail, prefers business
@@ -25,7 +25,7 @@ echo getenv('SENDGRID_API_KEY');
     // Create a mail object
     $mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-    $sg = new \SendGrid(getenv('SENDGRID_API_KEY'));
+    $sg = new \SendGrid($API_KEY);
     $response = $sg->client->mail()->send()->post($mail);
 
     if ($response->statusCode() == 202) {
@@ -33,5 +33,5 @@ echo getenv('SENDGRID_API_KEY');
      echo 'done';
     } else {
      echo 'false';
-   }*/
+   }
 ?>
