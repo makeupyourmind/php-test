@@ -25,7 +25,7 @@ try {
 } catch (Exception $e) {
     echo 'Caught exception: ',  $e->getMessage(), "\n";
 }*/
-require("./sendgrid-php.php");
+require ("./sendgrid-php.php");
 //require 'vendor/autoload.php';
 $sendgrid = new SendGrid(getenv('SENDGRID_API_KEY'));
 $email    = new SendGrid\Email();
