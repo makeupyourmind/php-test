@@ -38,6 +38,7 @@ $email
 
 try {
   $sendgrid->send($email);
+	echo "sended";
 } catch(\SendGrid\Exception $e) {
 }
 	/*$sg = new \SendGrid($API_KEY);
