@@ -1,7 +1,7 @@
 <?php
 include ('config/db.php'); // подключаем скрипт
 
-$link = pg_connect($host, $user, $password, $database)
+$link = pg_connect("host=$host port=$port dbname=$dbname user=$user password=$password")
     or die("Ошибка соединения с базой " . pg_connect($link));
   $name = $_POST["name"];
 $query ="SELECT name, password FROM users where name='$name'";
