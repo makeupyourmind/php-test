@@ -40,6 +40,7 @@ try {
   $sendgrid->send($email);
 	echo "sended";
 } catch(\SendGrid\Exception $e) {
+	echo "error";
 }
 	/*$sg = new \SendGrid($API_KEY);
 	$response = $sg->client->mail()->send()->post($mail);
