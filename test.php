@@ -1,7 +1,8 @@
 <?php
 //require("./sendgrid-php/sendgrid-php.php");
 
-$key = getev('SENDGRID_API_KEY');
+$key = getenv('SENDGRID_API_KEY');
+echo $key;
 /*$sendgrid = new SendGrid($key);
 
 echo $key;
