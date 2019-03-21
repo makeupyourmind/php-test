@@ -19,7 +19,7 @@
 	// Create a mail object
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);*/
 
-  echo "hi";
+  echo getenv('SENDGRID_API_KEY');
 	$sendgrid = new SendGrid($API_KEY);
 $email = new SendGrid\Email();
 $to = "nikitosnov@gmail.com";
