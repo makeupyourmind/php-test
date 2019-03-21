@@ -1,8 +1,8 @@
 <?php
-require("./sendgrid-php/sendgrid-php.php");
+//require("./sendgrid-php/sendgrid-php.php");
 
 $key = getev('SENDGRID_API_KEY');
-$sendgrid = new SendGrid($key);
+/*$sendgrid = new SendGrid($key);
 
 echo $key;
 
@@ -22,6 +22,6 @@ $email
   ->setText('Hello World!')
   ->setHtml($html);
 
-$sendgrid->send($email);
+$sendgrid->send($email);*/
 
 ?>
