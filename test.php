@@ -1,9 +1,9 @@
 <?php
 	// You need to install the sendgrid client library so run: composer require sendgrid/sendgrid
-	require '/vendor/autoload.php';
+	require './sendgrid-php/vendor/autoload.php';
 	// contains a variable called: $API_KEY that is the API Key.
 	// You need this API_KEY created on the Sendgrid website.
-	include_once('credentials.php');
+	include_once('./credentials.php');
 
 	$FROM_EMAIL = 'nkitosnov@gmail.com';
 	// they dont like when it comes from @gmail, prefers business emails
