@@ -1,11 +1,11 @@
 <?php
 include ('config/db.php'); // подключаем скрипт
 
-$link = pg_connect("host=ec2-23-23-195-205.compute-1.amazonaws.com
- port=5432
- dbname=dbsfrnrnit83ug
- user=rhkqakswlapxxs
- password=7e55e5088ba4df938f3fa4b5d1452e0eb7b5947c5e1f59a41c2038759481276b")
+$link = pg_connect("host=$host
+ port=$port
+ dbname=$dbname
+ user=$user
+ password=$password")
     or die("connection failed соединения с базой " . pg_connect($link));
   $name = $_POST["name"];
 $query ="SELECT name, password FROM users where name='$name'";
