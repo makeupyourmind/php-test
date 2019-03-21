@@ -5,7 +5,7 @@
 
     // contains a variable called: $API_KEY that is the API Key.
     // You need this API_KEY created on the Sendgrid website.
-    include_once('./credentials.php');
+    //include_once('./credentials.php');
 
     $FROM_EMAIL = 'nikitosnov@gmail.com';
     // they dont like when it comes from @gmail, prefers business
