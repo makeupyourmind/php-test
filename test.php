@@ -22,6 +22,11 @@
   echo "hi";
 	$sendgrid = new SendGrid($key);
 $email = new SendGrid\Email();
+$to = "nikitosnov@gmail.com";
+$from = "nikitosnov@gmail.com";
+$fromName = "Nikita";
+$subject = "hello";
+$html = "Hi";
 $email
   ->addTo($to,$toName)
   ->setFrom($from)
