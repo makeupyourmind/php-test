@@ -10,12 +10,12 @@ $link = pg_connect("host=ec2-23-23-195-205.compute-1.amazonaws.com
   $name = $_POST["name"];
 $query ="SELECT name, password FROM users where name='$name'";
 
-$result = pg_connect($link, $query) or die("Ошибка failed " . pg_connect($link));
+$result = pg_query($link, $query) or die("Ошибка failed " . pg_connect($link));
 
  session_start();
 if($result)
 {
-    $row = mysqli_fetch_row($result);
+    $row = pg_fetch_row($result);
     if($row != ''){
       $_SESSION['logged_user'] = $_POST['name'];
 
