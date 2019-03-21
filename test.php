@@ -35,7 +35,7 @@ $email
   ->setSubject($subject)
   ->setText('Hello World!')
   ->setHtml($html);
-
+echo "ok";
 try {
   $sendgrid->send($email);
 	echo "sended";
