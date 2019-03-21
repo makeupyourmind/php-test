@@ -211,7 +211,7 @@ $("#myForm").submit(function(event) {
             event.preventDefault();
             $.post('authorize.php', {'name':$('#name').val()},
                     function(data) {
-                          alert(data);
+                          //alert(data);
                           var str = data;
                           var index = str.indexOf(" ");  // Gets the first index where a space occours
                           var first = str.substr(0, index); // Gets the first part
