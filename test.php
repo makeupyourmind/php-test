@@ -17,7 +17,7 @@ $email->addContent(
     "text/html", "<strong>and easy to do anywhere, even with PHP</strong>"
 );
 echo "ok";
-$sendgrid = new \SendGrid(getenv($_ENV['SENDGRID_API_KEY']));
+/*$sendgrid = new \SendGrid(getenv($_ENV['SENDGRID_API_KEY']));
 try {
     $response = $sendgrid->send($email);
     print $response->statusCode() . "\n";
@@ -25,5 +25,5 @@ try {
     print $response->body() . "\n";
 } catch (Exception $e) {
     echo 'Caught exception: '. $e->getMessage() ."\n";
-}
+}*/
 ?>
