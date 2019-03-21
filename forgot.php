@@ -1,16 +1,20 @@
 <?php
 include ('config/db.php');
 
-$link = mysqli_connect($host, $user, $password, $database)
-	or die("Ошибка " . mysqli_error($link));
+$link = pg_connect("host=$host
+ port=$port
+ dbname=$dbname
+ user=$user
+ password=$password")
+	or die("Ошибка " . pg_last_error($link));
    $email = $_POST["email"];
 
 	 $query ="SELECT email, password FROM users where email='$email'";
 
-	 $result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+	 $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
  	if($result)
  	{
- 	    $row = mysqli_fetch_row($result);
+ 	    $row = pg_fetch_row($result);
  	    if($row != ''){
         echo $row[0];
         $name = "";
@@ -33,5 +37,5 @@ $link = mysqli_connect($host, $user, $password, $database)
 
  	}
 
-mysqli_close($link);
+pg_close($link);
 ?>

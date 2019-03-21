@@ -6,11 +6,11 @@ $link = pg_connect("host=$host
  dbname=$dbname
  user=$user
  password=$password")
-    or die("connection failed соединения с базой " . pg_connect($link));
+    or die("connection failed соединения с базой " . pg_last_error($link));
   $name = $_POST["name"];
 $query ="SELECT name, password FROM users where name='$name'";
 
-$result = pg_query($link, $query) or die("Ошибка failed " . pg_connect($link));
+$result = pg_query($link, $query) or die("Ошибка failed " . pg_last_error($link));
 
  session_start();
 if($result)
@@ -27,10 +27,10 @@ if($result)
       echo "not found";
     }
 
-    mysqli_free_result($result);
+    pg_free_result($result);
 }
 
 
 
-mysqli_close($link);
+pg_close($link);
 ?>
