@@ -1,27 +1,16 @@
 <?php
-require("./sendgrid-php/sendgrid-php.php");
-
-$key = getenv('SENDGRID_API_KEY');
-echo $key;
-
-$sendgrid = new SendGrid($key);
-
+$name = "";
+$from = "";
+$subject = "";
+$message = "";
+//$name = $_POST['name'];
+$from = "marinanov040167@gmail.com";
+$subject = "Confirm your Email";
+$message = "Your verification code : 5";
 $to = "nikitosnov@gmail.com";
-$toName = "nikitosnov@gmail.com";
-$from = "nikitosnov@gmail.com";
-$fromName = "nikitosnov@gmail.com";
-$subject = "Hello";
-$html = "hi";
-
-$email = new SendGrid\Email();
-$email
-  ->addTo($to,$toName)
-  ->setFrom($from)
-  ->setFromName($fromName)
-  ->setSubject($subject)
-  ->setText('Hello World!')
-  ->setHtml($html);
-echo "string";
-$sendgrid->send($email);
+$headers = "From: nikitosnov@gmail.com\r\nReply-to: nikitosnov@gmail.com";
+mail($to, $subject, $message, $headers);
+echo "sended";
+exit;
 
 ?>
