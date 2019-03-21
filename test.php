@@ -4,8 +4,8 @@
 	// contains a variable called: $API_KEY that is the API Key.
 	// You need this API_KEY created on the Sendgrid website.
 	include_once('credentials.php');
-
-	$FROM_EMAIL = 'nkitosnov@gmail.com';
+  echo "ok";
+	/*$FROM_EMAIL = 'nkitosnov@gmail.com';
 	// they dont like when it comes from @gmail, prefers business emails
 	$TO_EMAIL = 'nkitosnov@gmail.com';
 	// Try to be nice. Take a look at the anti spam laws. In most cases, you must
@@ -27,5 +27,5 @@
 		echo 'done';
 	} else {
 		echo 'false';
-	}
+	}*/
 ?>
