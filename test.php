@@ -3,9 +3,9 @@
 	require './sendgrid-php/vendor/autoload.php';
 	// contains a variable called: $API_KEY that is the API Key.
 	// You need this API_KEY created on the Sendgrid website.
-	include_once('credent.php');
-  echo "ok";
-	/*$FROM_EMAIL = 'nkitosnov@gmail.com';
+	include_once('credentials.php');
+
+	$FROM_EMAIL = 'nkitosnov@gmail.com';
 	// they dont like when it comes from @gmail, prefers business emails
 	$TO_EMAIL = 'nkitosnov@gmail.com';
 	// Try to be nice. Take a look at the anti spam laws. In most cases, you must
@@ -19,7 +19,7 @@
 	// Create a mail object
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
-	$sg = new \SendGrid($API_KEY);
+	/*$sg = new \SendGrid($API_KEY);
 	$response = $sg->client->mail()->send()->post($mail);
 
 	if ($response->statusCode() == 202) {
