@@ -5,7 +5,7 @@
 	// You need this API_KEY created on the Sendgrid website.
 	include_once('./credentials.php');
 
-	$FROM_EMAIL = 'nkitosnov@gmail.com';
+	/*$FROM_EMAIL = 'nkitosnov@gmail.com';
 	// they dont like when it comes from @gmail, prefers business emails
 	$TO_EMAIL = 'nkitosnov@gmail.com';
 	// Try to be nice. Take a look at the anti spam laws. In most cases, you must
@@ -17,9 +17,23 @@
 	// Create Sendgrid content
 	$content = new SendGrid\Content("text/html",$htmlContent);
 	// Create a mail object
-	$mail = new SendGrid\Mail($from, $subject, $to, $content);
+	$mail = new SendGrid\Mail($from, $subject, $to, $content);*/
 
   echo "hi";
+	$sendgrid = new SendGrid($key);
+$email = new SendGrid\Email();
+$email
+  ->addTo($to,$toName)
+  ->setFrom($from)
+  ->setFromName($fromName)
+  ->setSubject($subject)
+  ->setText('Hello World!')
+  ->setHtml($html);
+
+try {
+  $sendgrid->send($email);
+} catch(\SendGrid\Exception $e) {
+}
 	/*$sg = new \SendGrid($API_KEY);
 	$response = $sg->client->mail()->send()->post($mail);
 
