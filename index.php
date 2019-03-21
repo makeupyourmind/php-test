@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<?php include ('config/db.php')?>
+
 <html>
   <head>
     <meta charset="utf-8">
@@ -105,5 +107,16 @@
         <h2>Example site on PHP + phpMyAdmin</h2>
       </div>
     </div>
+
+    <?php
+    // echo 'Это страница индекса';
+  $sql = 'SELECT * FROM users';
+  $stmt = $pdo->prepare($sql);
+  $stmt->execute();
+  $rowCount = $stmt->rowCount();
+  $details = $stmt->fetch();
+  print_r ($details);
+     ?>
+
   </body>
 </html>
