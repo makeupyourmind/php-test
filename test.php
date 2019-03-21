@@ -3,17 +3,16 @@ require("./sendgrid-php/sendgrid-php.php");
 
 $key = getenv('SENDGRID_API_KEY');
 echo $key;
-$sendgrid = new SendGrid($key);
-
-echo $key;
 
 $sendgrid = new SendGrid($key);
+
 $to = "nikitosnov@gmail.com";
 $toName = "nikitosnov@gmail.com";
 $from = "nikitosnov@gmail.com";
 $fromName = "nikitosnov@gmail.com";
 $subject = "Hello";
 $html = "hi";
+
 $email = new SendGrid\Email();
 $email
   ->addTo($to,$toName)
