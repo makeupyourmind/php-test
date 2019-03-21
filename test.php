@@ -19,6 +19,7 @@
 	// Create a mail object
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);
 
+  echo "hi";
 	/*$sg = new \SendGrid($API_KEY);
 	$response = $sg->client->mail()->send()->post($mail);
 
