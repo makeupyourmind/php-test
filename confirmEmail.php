@@ -1,5 +1,5 @@
 <?php
-  require_once 'connection.php';
+  include ('config/db.php');
 
   $code = $_POST['codeOne'];
   $confirm = $_POST['confirm'];

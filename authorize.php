@@ -1,5 +1,5 @@
 <?php
-require_once 'connection.php'; // подключаем скрипт
+include ('config/db.php'); // подключаем скрипт
 
 $link = mysqli_connect($host, $user, $password, $database)
     or die("Ошибка " . mysqli_error($link));
