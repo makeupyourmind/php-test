@@ -1,12 +1,12 @@
 <?php
 include ('config/db.php'); // подключаем скрипт
 
-$link = mysqli_connect($host, $user, $password, $database)
-    or die("Ошибка " . mysqli_error($link));
+$link = pg_connect($host, $user, $password, $database)
+    or die("Ошибка " . pg_connect($link));
   $name = $_POST["name"];
 $query ="SELECT name, password FROM users where name='$name'";
 
-$result = mysqli_query($link, $query) or die("Ошибка " . mysqli_error($link));
+$result = pg_connect($link, $query) or die("Ошибка " . mysqli_error($link));
 
  session_start();
 if($result)
@@ -14,12 +14,10 @@ if($result)
     $row = mysqli_fetch_row($result);
     if($row != ''){
       $_SESSION['logged_user'] = $_POST['name'];
-      //header("Location: homePage.php");
-      //while ($row = mysqli_fetch_row($result)) {
+
        echo $row[0].' '.$row[1];
        exit;
-      //}
-      //echo $row[0];
+
     }
     else {
       echo "not found";
