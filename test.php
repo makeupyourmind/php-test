@@ -20,7 +20,7 @@
 	$mail = new SendGrid\Mail($from, $subject, $to, $content);*/
 
   echo "hi";
-	$sendgrid = new SendGrid($key);
+	$sendgrid = new SendGrid($API_KEY);
 $email = new SendGrid\Email();
 $to = "nikitosnov@gmail.com";
 $from = "nikitosnov@gmail.com";
