@@ -1,6 +1,6 @@
 <?php
-echo "string";
-/*include ('config/db.php');
+//echo "string";
+include ('config/db.php');
 
 $link = pg_connect("host=$host
  port=$port
@@ -36,13 +36,13 @@ $link = pg_connect("host=$host
 
 
 			  $response = $sg->client->mail()->send()->post($mail);
-				echo "ok";
+				//echo "ok";
  	    }
  	    else {
- 	      echo "error";
+ 	      //echo "error";
  	    }
 
  	}
 
-pg_close($link);*/
+pg_close($link);
 ?>
