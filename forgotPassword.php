@@ -129,6 +129,7 @@
       margin: 0 auto;
       text-align: center;
       border-radius: 10px;
+      margin-top: 10px;
     }
 
     #server2{
@@ -141,6 +142,7 @@
       margin: 0 auto;
       text-align: center;
       border-radius: 10px;
+      margin-top: 10px; 
     }
   </style>
 
@@ -184,40 +186,33 @@
 
   <script>
   $("#Enter").click(function(event) {
-    //alert("ok");
     event.preventDefault();
               if($('#email').val() == ''){
                 $("#server").css("display","block");
                 $("#server").html("Enter data");
-                //alert("b");
+                setTimeout(function(){ $('#server').hide(); }, 3000);
+                setTimeout(function(){ $('#server').show(); }, 500);
                 return false;
               }
 
               $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                         alert(data);
-                        //alert("ok");
-                            //alert(data[1]);
                             if(data != 'error'){
                               $("#server2").css("display","block");
                               $("#server2").html("You receive on this email your password");
+                              setTimeout(function(){ $('#server2').hide(); }, 3000);
+                              setTimeout(function(){ $('#server2').show(); }, 500);
                             }
                             else {
                               $("#server").css("display","block");
                               $("#server").html("This email is incorrect");
+                              setTimeout(function(){ $('#server').hide(); }, 3000);
+                              setTimeout(function(){ $('#server').show(); }, 500);
                             }
 
                       });
 
-                      /*$.ajax({
-                      url : '/forgot.php',
-                      type : 'POST',
-                      dataType : 'JSON',
-                      success: function(data){
-                          alert("data : " + data);///
-
-                       }
-                     });*/
               });
   </script>
 
