@@ -13,11 +13,12 @@ $link = pg_connect("host=$host
 	 $query ="SELECT email, password FROM users where email='$email'";
 
 	 $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
+   echo "string";
  	if($result)
  	{
  	    $row = pg_fetch_row($result);
  	    if($row != ''){
-        echo "string";
+        //echo "string";
         //echo $row[0];
         $name = $_POST['name'];
 			  $from = "marinanov040167@gmail.com";
