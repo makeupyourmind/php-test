@@ -8,7 +8,7 @@
      $tmp_name = $_FILES['pic']['tmp_name'];
      $error = $_FILES['pic']['error'];
 
-    $location = "./users/$user/";
+    $location = "users/$user/";
     $locationAva = "users/$user/avatar/";
         move_uploaded_file($tmp_name, $location.$name);
 
