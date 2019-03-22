@@ -197,7 +197,7 @@
                 return false;
               }
 
-              $.post('forgot.php', {'email':$('#email').val()},
+              /*$.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                             alert(data[1]);
                             if(data != 'error'){
@@ -207,7 +207,7 @@
                               $("#server").html("This email is incorrect");
                             }
 
-                      });
+                      });*/
               });
   </script>
 
