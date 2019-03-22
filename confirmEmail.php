@@ -15,7 +15,7 @@
      $password = $_POST["password"];
      $email = $_POST["email"];
 
-    $query ="INSERT INTO users VALUES('','$name','$password', '$email')";
+    $query ="INSERT INTO users VALUES('null','$name','$password', '$email')";
 
     $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
 
