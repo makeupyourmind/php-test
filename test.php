@@ -1,9 +1,9 @@
 <?php
-  echo getenv("HOST");
+  echo "host : ".getenv("HOST");
   echo "<br>";
-  echo getenv("USER");
+  echo "user : ".getenv("USER");
   echo "<br>";
-  echo getenv("PASSWORD");
+  echo "password : ".getenv("PASSWORD");
   echo "<br>";
-  echo getenv("PORT");
+  echo "port : ".getenv("PORT");
  ?>
