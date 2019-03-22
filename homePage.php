@@ -513,7 +513,7 @@
  var index = str.indexOf(",");  // Gets the first index where a space occours
  var first = str.substr(0, index); // Gets the first part
  var last = str.substr(index + 1);  // Gets the text part
-
+alert("last : " + last);
  var path = "./users/" + last + "/";
  $.ajax({
          url: "uploadPhoto.php",
