@@ -189,8 +189,8 @@
   </div>
 
   <script>
-  $("#myForm").submit(function(event) {
-    //alert("ok");
+  $("#Enter").click(function(event) {
+    alert("ok");
     event.preventDefault();
               /*if($('#email').val() == ''){
                 $("#server").css("display","block");
@@ -199,7 +199,7 @@
                 return false;
               }*/
 
-              /*$.post('forgot.php', {'email':$('#email').val()},
+              $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                         alert(data);
                         //alert("ok");
@@ -213,9 +213,9 @@
                               $("#server").html("This email is incorrect");
                             }
 
-                      });*/
+                      });
 
-                      $.ajax({
+                      /*$.ajax({
                       url : '/forgot.php',
                       type : 'POST',
                       dataType : 'JSON',
@@ -223,7 +223,7 @@
                           alert("data : " + data);///
 
                        }
-                      });
+                     });*/
               });
   </script>
 
