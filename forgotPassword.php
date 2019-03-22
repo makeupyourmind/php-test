@@ -200,8 +200,9 @@
 
               $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
-                        alert("ok");
-                            alert(data[1]);
+                        alert(data);
+                        //alert("ok");
+                            //alert(data[1]);
                             if(data != 'error'){
                               $("#server2").html("You receive on this email your password");
                             }
