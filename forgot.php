@@ -1,5 +1,5 @@
 <?php
-//echo "string";
+
 include ('config/db.php');
 
 $link = pg_connect("host=$host
@@ -13,14 +13,11 @@ $link = pg_connect("host=$host
 	 $query ="SELECT email, password FROM users where email='$email'";
 
 	 $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
-   //echo $query;
- 	//if($result)
- 	//{
+
  	    $row = pg_fetch_row($result);
  	    if($row != ''){
-        //echo "string";
-        //echo $row[0];
-        /*$name = $_POST['name'];
+
+        $name = $_POST['name'];
 			  $from = "marinanov040167@gmail.com";
 			  $message = "Your password is : $row[1]";
 			  $to = $_POST['email'];
@@ -37,14 +34,12 @@ $link = pg_connect("host=$host
 			  $sg = new \SendGrid($apiKey);
 
 
-			  $response = $sg->client->mail()->send()->post($mail);*/
+			  $response = $sg->client->mail()->send()->post($mail);
 				echo "ok";
  	    }
  	    else {
  	      echo "error";
  	    }
-
- 	//}
 
 pg_close($link);
 ?>
