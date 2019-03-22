@@ -1,6 +1,6 @@
 <?php
 /*SendGrid Library*/
-require_once ('vendor/autoload.php');
+require_once ('SendGrid-API/vendor/autoload.php');
 
 /*Content*/
 $from = new SendGrid\Email("nikitosnov@gmail.com", "nikitosnov@gmail.com");
