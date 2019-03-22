@@ -12,7 +12,7 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                       // Enable verbose debug output
+    /*$mail->SMTPDebug = 2;                                       // Enable verbose debug output
     $mail->isSMTP();                                            // Set mailer to use SMTP
     $mail->Host       = 'smtp.gmail.com';  // Specify main and backup SMTP servers
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -37,7 +37,18 @@ try {
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = 'Here is the subject';
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
-    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
+    $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';*/
+    $mail->IsSMTP(); // telling the class to use SMTP
+    $mail->Host       = "smtp.gmail.com"; // SMTP server
+    $mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
+                                               // 1 = errors and messages
+                                               // 2 = messages only
+    $mail->SMTPAuth   = true;                  // enable SMTP authentication
+    $mail->SMTPSecure = "tls";                 // sets the prefix to the servier
+    $mail->Host       = "smtp.gmail.com";      // sets GMAIL as the SMTP server
+    $mail->Port       = 587;                   // set the SMTP port for the GMAIL server
+    $mail->Username   = "marinanov040167@gmail.com";  // GMAIL username
+    $mail->Password   = "marinanov";
 
     $mail->send();
     echo 'Message has been sent';
