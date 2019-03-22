@@ -118,25 +118,13 @@
       background-color: #000000;
     }
 
-    .server{
-      display: none;
-      background-color: #FF3547;
-      width: 350px;
-      margin: 0 auto;
-      text-align: center;
-      border-radius: 10px;
-    }
-
     #server{
       text-transform: uppercase;
       color: #fff;
       font-size: 16px;
       padding: 4px 0;
-    }
-
-    .server2{
       display: none;
-      background-color: #4285F4;
+      background-color: #FF3547;
       width: 350px;
       margin: 0 auto;
       text-align: center;
@@ -147,6 +135,12 @@
       color: #fff;
       font-size: 16px;
       padding: 4px 0;
+      display: none;
+      background-color: #4285F4;
+      width: 350px;
+      margin: 0 auto;
+      text-align: center;
+      border-radius: 10px;
     }
   </style>
 
@@ -183,8 +177,8 @@
         </div>
     </form>
 
-    <div class="server"><p id = "server"><p></div>
-    <div class="server2"><p id = "server2"><p></div>
+    <p id = "server"><p>
+    <p id = "server2"><p>
    </div>
   </div>
 
@@ -192,26 +186,26 @@
   $("#Enter").click(function(event) {
     //alert("ok");
     event.preventDefault();
-              /*if($('#email').val() == ''){
+              if($('#email').val() == ''){
                 $("#server").css("display","block");
                 $("#server").html("Enter data");
                 //alert("b");
                 return false;
-              }*/
+              }
 
               $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                         alert(data);
                         //alert("ok");
                             //alert(data[1]);
-                            /*if(data != 'error'){
+                            if(data != 'error'){
                               $("#server2").css("display","block");
                               $("#server2").html("You receive on this email your password");
                             }
                             else {
                               $("#server").css("display","block");
                               $("#server").html("This email is incorrect");
-                            }*/
+                            }
 
                       });
 
