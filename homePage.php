@@ -494,7 +494,7 @@
     type : 'POST',
     dataType : 'JSON',
     success: function(data){
-
+        alert("data from searchPhotoToSet : "  + data);
         $("#lengthOfArrayPhoto").html(data.length);
          $('#AvatarOnly').attr('src', path + data[n]);
          $('#getPhotoUser').attr('src', path + data[n]);
@@ -524,7 +524,7 @@
          type: 'POST',
          dataType : 'JSON',//для получения ответа норм.........................................
          success: function(data){
-
+              alert("uploadPhoto : "  + data);
                $('#AvatarOnly').attr('src', path + data);
 
            }
