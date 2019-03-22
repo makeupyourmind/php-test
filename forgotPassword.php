@@ -190,7 +190,7 @@
 
   <script>
   $("#Enter").click(function(event) {
-    alert("ok");
+    //alert("ok");
     event.preventDefault();
               /*if($('#email').val() == ''){
                 $("#server").css("display","block");
@@ -201,9 +201,9 @@
 
               $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
-                        //alert(data);
+                        alert(data);
                         //alert("ok");
-                            alert(data[1]);
+                            //alert(data[1]);
                             /*if(data != 'error'){
                               $("#server2").css("display","block");
                               $("#server2").html("You receive on this email your password");
