@@ -190,6 +190,7 @@
 
   <script>
   $("#myForm").submit(function(event) {
+    alert("ok");
               if($('#email').val() == ''){
                 $("#server").html("Enter data");
                 return false;
