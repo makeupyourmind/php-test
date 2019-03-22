@@ -1,6 +1,6 @@
 <?php
-echo "string";
-/*include ('config/db.php');
+//echo "string";
+include ('config/db.php');
 
 $link = pg_connect("host=$host
  port=$port
@@ -18,7 +18,7 @@ $link = pg_connect("host=$host
  	{
  	    $row = pg_fetch_row($result);
  	    if($row != ''){
-        //echo "string";
+        echo "string";
         //echo $row[0];
         $name = $_POST['name'];
 			  $from = "marinanov040167@gmail.com";
@@ -41,10 +41,10 @@ $link = pg_connect("host=$host
 				//echo "ok";
  	    }
  	    else {
- 	      //echo "error";
+ 	      echo "error";
  	    }
 
  	}
 
-pg_close($link);*/
+pg_close($link);
 ?>
