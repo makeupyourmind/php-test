@@ -1,5 +1,5 @@
 <?php
-//echo "string";
+echo "string";
 include ('config/db.php');
 
 $link = pg_connect("host=$host
