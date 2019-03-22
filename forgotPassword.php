@@ -86,6 +86,7 @@
     font-size: 16px;
     outline: 0;
     margin-left: 10px;
+    color: #696969;
    }
 
    input:active, input:focus{
@@ -94,7 +95,7 @@
       border-left: 0px solid grey;
       border-right: 0px solid grey;
       border-bottom: 2px solid #4285f4;
-
+      color: #696969;
     }
 
     .log{
@@ -142,7 +143,7 @@
       margin: 0 auto;
       text-align: center;
       border-radius: 10px;
-      margin-top: 10px; 
+      margin-top: 10px;
     }
   </style>
 
