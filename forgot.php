@@ -19,8 +19,9 @@ $link = pg_connect("host=$host
 
         //$name = $_POST['name'];
         echo "ok";
+        require_once ('SendGrid-API/vendor/autoload.php');
 			  $from = "marinanov040167@gmail.com";
-			  //$message = "Your password is : $row[1]";
+			  $message = "Your password is : $row[1]";
 			  $to = $_POST['email'];
 
 
@@ -35,7 +36,7 @@ $link = pg_connect("host=$host
 			  $sg = new \SendGrid($apiKey);
 
 
-			  //$response = $sg->client->mail()->send()->post($mail);
+			  $response = $sg->client->mail()->send()->post($mail);
 
  	    }
  	    else {
