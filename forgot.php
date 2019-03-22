@@ -20,7 +20,7 @@ $link = pg_connect("host=$host
         //$name = $_POST['name'];
         echo "ok";
 			  $from = "marinanov040167@gmail.com";
-			  $message = "Your password is : $row[1]";
+			  //$message = "Your password is : $row[1]";
 			  $to = $_POST['email'];
 
 
