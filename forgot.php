@@ -24,7 +24,7 @@ $link = pg_connect("host=$host
 			  $to = $_POST['email'];
 
 
-			  $from = new SendGrid\Email($name,$from);
+			  $from = new SendGrid\Email('support',$from);
         $subject = "Forgot password";
 			  $to = new SendGrid\Email("", $to);
 			  $content = new SendGrid\Content("text/html", $message);
