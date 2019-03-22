@@ -193,6 +193,7 @@
     //alert("ok");
     event.preventDefault();
               if($('#email').val() == ''){
+                $("#server").css("display","block");
                 $("#server").html("Enter data");
                 //alert("b");
                 return false;
@@ -202,7 +203,7 @@
                       function(data) {
                         alert(data);
                         //alert("ok");
-                            alert(data[1]);
+                            //alert(data[1]);
                             if(data != 'error'){
                               $("#server2").css("display","block");
                               $("#server2").html("You receive on this email your password");
