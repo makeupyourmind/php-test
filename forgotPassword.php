@@ -192,12 +192,12 @@
   $("#myForm").submit(function(event) {
     //alert("ok");
     event.preventDefault();
-              if($('#email').val() == ''){
+              /*if($('#email').val() == ''){
                 $("#server").css("display","block");
                 $("#server").html("Enter data");
                 //alert("b");
                 return false;
-              }
+              }*/
 
               /*$.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
@@ -220,7 +220,7 @@
                       type : 'POST',
                       dataType : 'JSON',
                       success: function(data){
-                          alert("data : " data);///
+                          alert("data : " + data);///
 
                        }
                       });
