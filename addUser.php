@@ -23,20 +23,6 @@ $link = pg_connect("host=$host
  	    else {
  	      //echo "ok";
 				$code = mt_rand(5, 100);
-			   //echo $code;
-			  /*$name = "";
-			  $from = "";
-			  $subject = "";
-			  $message = "";
-			  //$name = $_POST['name'];
-			  $from = "marinanov040167@gmail.com";
-			  $subject = "Confirm your Email";
-			  $message = "Your verification code : $code";
-			  $to = $_POST['email'];
-			  $headers = "From: $from\r\nReply-to: $from";
-			  mail($to, $subject, $message, $headers);
-				echo $code;
-				exit;*/
 				require_once ('SendGrid-API/vendor/autoload.php');
 			  $name = $_POST['name'];
 			  $from = "marinanov040167@gmail.com";
