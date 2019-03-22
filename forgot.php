@@ -1,6 +1,6 @@
 <?php
 echo "string";
-include ('config/db.php');
+/*include ('config/db.php');
 
 $link = pg_connect("host=$host
  port=$port
@@ -46,5 +46,5 @@ $link = pg_connect("host=$host
 
  	}
 
-pg_close($link);
+pg_close($link);*/
 ?>
