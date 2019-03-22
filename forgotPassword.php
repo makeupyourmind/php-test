@@ -194,6 +194,7 @@
     event.preventDefault();
               if($('#email').val() == ''){
                 $("#server").html("Enter data");
+                alert("b");
                 return false;
               }
 
