@@ -3,7 +3,7 @@ $host = getenv('HOST');
 $user = "rhkqakswlapxxs";
 $password = "7e55e5088ba4df938f3fa4b5d1452e0eb7b5947c5e1f59a41c2038759481276b";
 $dbname = "dbsfrnrnit83ug";
-$port = getenv('PORT');
+$port = "5432";
 try{
   //Set DSN data source name
     $dsn = "pgsql:host=" . $host . ";port=" . $port .";dbname=" . $dbname . ";user=" . $user . ";password=" . $password . ";";
