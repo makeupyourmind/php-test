@@ -14,8 +14,8 @@ $link = pg_connect("host=$host
 
 	 $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
    //echo $query;
- 	if($result)
- 	{
+ 	//if($result)
+ 	//{
  	    $row = pg_fetch_row($result);
  	    if($row != ''){
         echo "string";
@@ -44,7 +44,7 @@ $link = pg_connect("host=$host
  	      echo "error";
  	    }
 
- 	}
+ 	//}
 
 pg_close($link);
 ?>
