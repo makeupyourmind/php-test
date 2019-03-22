@@ -39,7 +39,7 @@ try {
     $mail->Body    = 'This is the HTML message body <b>in bold!</b>';
     $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';*/
     $mail->IsSMTP(); // telling the class to use SMTP
-    $mail->Host       = "smtp.gmail.com"; // SMTP server
+    //$mail->Host       = "smtp.gmail.com"; // SMTP server
     $mail->SMTPDebug  = 2;                     // enables SMTP debug information (for testing)
                                                // 1 = errors and messages
                                                // 2 = messages only
