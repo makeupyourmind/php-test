@@ -204,14 +204,14 @@
                         alert(data);
                         //alert("ok");
                             //alert(data[1]);
-                            if(data != 'error'){
+                            /*if(data != 'error'){
                               $("#server2").css("display","block");
                               $("#server2").html("You receive on this email your password");
                             }
                             else {
                               $("#server").css("display","block");
                               $("#server").html("This email is incorrect");
-                            }
+                            }*/
 
                       });
 

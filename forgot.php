@@ -13,8 +13,8 @@ $link = pg_connect("host=$host
 	 $query ="SELECT email, password FROM users where email='$email'";
 
 	 $result = pg_query($link, $query) or die("Ошибка " . pg_last_error($link));
-   echo "string";
- 	if($result)
+   echo $query;
+ 	/*if($result)
  	{
  	    $row = pg_fetch_row($result);
  	    if($row != ''){
@@ -44,7 +44,7 @@ $link = pg_connect("host=$host
  	      echo "error";
  	    }
 
- 	}
+ 	}*/
 
 pg_close($link);
 ?>
