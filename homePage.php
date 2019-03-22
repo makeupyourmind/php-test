@@ -264,14 +264,12 @@
      <div class = "closeView"><a class="gg" id = "closeView">Close View</a>
        <a id = "href" class="gg" href="">View all photo</a>
      </div>
-     <!--<a id = "href" class="gg" href="">View all photo</a>-->
+
     <div id = "imgForAvatar" class="imgForAvatar">
       <img src="" id = "AvatarOnly" width="90" height="90" alt="">
     </div>
 
 <div id = "allPhoto" class = "allPhoto">
-  <!--<div class="p"><p>Your photo</p></div>-->
-    <!--<div class = "closeView"><button class="view" id = "closeView" type="button" name="button">Close View</button></div>-->
     <div class="img">
       <img src = "" id = "getPhotoUser" width="90" height="90" class="avatar img-circle img-thumbnail" alt="">
     </div>
@@ -289,26 +287,15 @@
        <input type="file" id = "pic" name="pic">
      </div>
      <div id = "hideButton">
-       <!--<div class="buttonDel"><button type = "click" name = "DeletePhoto" class="btnDel" id = "DeletePhoto">Delete photo</button></div>-->
+
        <div class="buttonSet"><button type = "submit" name = "SetPhoto" class="btn" id = "file">Set photo</button></div>
      </div>
      </form>
 <div class="buttonDel"><button type = "submit" name = "DeletePhoto" class="btnDel" id = "DeletePhoto">Delete photo</button></div>
-     <!--<div id = "inf" class = "inf">
-       <span>Your name : </span> <span id = "userName"></span>
-       <br>
-      <span>Your password : </span> <span id = "userPassword"></span>
-       <br>
-      <span>Your email : </span> <span id = "userEmail"></span>
-       <p style = "color: red; font-size: 20px; display: none" id = "test"></p>
-    </div>-->
     <div class="del">
        <button id = "deleteAccount" class="btndanger" type="submit" name="button">Delete account</button>
     </div>
 
-    <!--<div class = "closeView"><a class="gg" id = "closeView">Close View</a>
-      <a id = "href" class="gg" href="">View all photo</a>
-    </div>-->
    </div>
 
  </div>
@@ -353,34 +340,28 @@
      var n = 0;
   $('#right').click(function(event){
 
-    //alert("right : " + $('#lengthOfArrayPhoto').html());
      event.preventDefault();
      n++;
-     //alert("n : " + n);
+
      $('#test').html(n);
      if(n >= $('#lengthOfArrayPhoto').html()){
        n = 0;
      }
-     /*if(n == $('#lengthOfArrayPhoto').html()){
-       n = 0;
-       alert("Я тут ");
-     }*/
 
   })
 
   $('#left').click(function(event){
 
-    //alert("left : " + $('img').attr('src'));
      event.preventDefault();
      if(n == 0){
        n = 0;
        $('#test').html(n);
-       //alert("n left toho nado: " + n);
+
      }
      else
     {
        n--;
-       //alert("n left : " + n);
+
        if(n < 0){
           n = 0;
        }
@@ -396,7 +377,7 @@
 <script> /*Скрипт для перебора фото на странице по нажатию на правую кнопку*/
  $('#right').click(function(event) {
    event.preventDefault();
-   //alert("n : " + $('#test').html());
+
 
    var n = $('#test').html();
    var temp = $('#get').html();
@@ -410,12 +391,9 @@
    type : 'POST',
    dataType : 'JSON',
    success: function(data){
-        //alert("right click : " + data);
+
         var dataSet = data;
-        //alert("dataSet right : " + dataSet[n]);
-        //$('#getPhotoUser').attr('src', path + dataSet[n]);
-        //alert("n : " + n);
-        //alert("lengthOfArrayPhoto : " + $('#lengthOfArrayPhoto').html());
+
         if(n >= $('#lengthOfArrayPhoto').html()){
           n = 0;
           $('#getPhotoUser').attr('src', path + dataSet[n]);
@@ -433,7 +411,7 @@
 <script> /*Скрипт для перебора фото на странице по нажатию на левую кнопку*/
  $('#left').click(function(event) {
    event.preventDefault();
-   //alert("n : " + $('#test').html());
+
    var n = $('#test').html();
    var temp = $('#get').html();
    var str = temp;
@@ -446,9 +424,9 @@
    type : 'POST',
    dataType : 'JSON',
    success: function(data){
-        //alert("left click : " + data);
+
         var dataSet = data;
-        //alert("dataSet left : " + 'dataSet[n]');
+
         $('#getPhotoUser').attr('src', path + dataSet[n]);
 
     }
@@ -475,10 +453,7 @@
       if(data == ''){
         alert("You have no photos");
       }
-        //alert("data : " + data);///
         var getID = $('#test').html();
-        //alert("id to del : " + getID);
-        //alert("name photo to del : " + data[getID]);
         var namePhotoToDel = data[getID];
           $.ajax({
           url : '/deletePhotoUser.php',
@@ -486,9 +461,6 @@
           data: ({temp: namePhotoToDel}),
           dataType: "JSON",
           success: function(data){
-                //alert("new data after delPhoto : " + data);
-                //alert("data length data ater del : " + )
-                //alert("data[0] : " + path + data[0]);
                 $('#getPhotoUser').attr('src', path + data[0]);
                 n = 0;
                 $('#test').text(n);
@@ -498,60 +470,9 @@
 
              }
            });
-
-
-        /////////////////////////////////////////////////////////////////////////////////////////////////////////
      }
   });
 
-
-    /*var toDel = $('img').attr('src');
-    var getID = $('#test').html();
-    alert("getID : " + getID);
-    alert("to del : "  + toDel);
-
-    var count = 1;
-    $('#count').html(count);
-    //alert('toDel : ' + toDel);
-    var temp = toDel.split('/').pop();
-    //var temp = getID;
-    var temp2 = $('#get').html();
-    var str = temp2;
-    var index = str.indexOf(",");  // Gets the first index where a space occours
-    var first = str.substr(0, index); // Gets the first part
-    var last = str.substr(index + 1);  // Gets the text part
-    var path = "./users/" + last + "/";
-    alert('temp : ' + temp);
-      $.ajax({
-      url : '/deletePhotoUser.php',
-      type : 'POST',
-      data: ({temp: temp}),
-      dataType: "JSON",
-      success: function(data){
-         //alert("data : " + data[0]);
-           //$('#getPhotoUser').attr('src', path + data);
-           if(data == "file does not exist"){
-             alert("You have no photo");
-           }
-           else {
-             //$('#AvatarOnly').attr('src', path + data[0]);////////////////////////////////////////////////////////////////////////////////
-             $.ajax({
-             url : '/searchPhotoToSet.php',
-             type : 'POST',
-             dataType : 'JSON',
-             success: function(data){
-                 alert("data after del : " + data.length);///
-                 //var index = data.length;
-                $('#AvatarOnly').attr('src', path + data[data.length - 1]);
-              }
-             });
-             /*var arrayPhoto = $('#lengthOfArrayPhoto').html();
-             arrayPhoto--;
-             $('#lengthOfArrayPhoto').html(arrayPhoto);
-             alert("arrayPhoto : " + arrayPhoto);
-           }
-       }
-     });*/
   })
 
 </script>
@@ -572,11 +493,8 @@
     url : '/searchPhotoToSet.php',
     type : 'POST',
     dataType : 'JSON',
-    /*cache: false,
-    contentType: false,
-    processData: false,*/
     success: function(data){
-        //alert("data : " + data.length);///
+
         $("#lengthOfArrayPhoto").html(data.length);
          $('#AvatarOnly').attr('src', path + data[n]);
          $('#getPhotoUser').attr('src', path + data[n]);
@@ -606,21 +524,9 @@
          type: 'POST',
          dataType : 'JSON',//для получения ответа норм.........................................
          success: function(data){
-             //alert("datamyForm : " + data);
-             //alert("temp: " + data[0]);
-             //$('#AvatarOnly').attr('src', path + data); //profit
-             /*if($('#count').html() == 1){
-               $('#AvatarOnly').attr('src', path + data[0]);
-               var arrayPhoto = $('#lengthOfArrayPhoto').html();
-               arrayPhoto--;
-               $('#lengthOfArrayPhoto').html(arrayPhoto);
-               alert("arrayPhoto : " + arrayPhoto);
-               alert("Я пошел сюда на удаление");
-             }
-             else {*/
-               //alert("Я пошел сюда на вставку");
+
                $('#AvatarOnly').attr('src', path + data);
-             //}
+
            }
      })
 
@@ -660,15 +566,13 @@
       //alert("last : " + last);
       $.post('getDataUser.php', {'name': last },
               function(data) {
-                     //alert("data : " + data);
+                     alert("data from document ready : " + data);
                      var str = data;
                      var index = str.indexOf(" ");
                      var first = str.substr(0, index);
                      var second = str.substr(index + 1, index + 1);
                      var last = str.substr(index + 2);
-                     //document.getElementById('userName').innerHTML = first;
-                     //document.getElementById('userPassword').innerHTML = second;
-                     //document.getElementById('userEmail').innerHTML = last;
+
                      document.querySelector('#userName').innerHTML = first;
                      document.querySelector('#userPassword').innerHTML = second;
                      document.querySelector('#userEmail').innerHTML = last;
