@@ -199,7 +199,7 @@
                 return false;
               }
 
-              $.post('forgot.php', {'email':$('#email').val()},
+              /*$.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                         alert(data);
                         //alert("ok");
@@ -213,6 +213,16 @@
                               $("#server").html("This email is incorrect");
                             }
 
+                      });*/
+
+                      $.ajax({
+                      url : '/forgot.php',
+                      type : 'POST',
+                      dataType : 'JSON',
+                      success: function(data){
+                          alert("data : " data);///
+
+                       }
                       });
               });
   </script>
