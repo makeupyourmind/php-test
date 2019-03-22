@@ -301,12 +301,12 @@ $("#myForm").submit(function(event) {
                             $("#form").css("display", "none");
                             document.getElementById('confirmForm').style.display = 'block';
                             $('#confirm').focus();
-                            
+
                             $( "#proof" ).click(function() {
                             $.post('confirmEmail.php', {'name': $('#name').val(), 'password' : $('#password').val() ,
                             'email':$('#email').val(), 'confirm' : $('#confirm').val(), 'codeOne' : data},
                                     function(data) {
-                                    //alert("data : " + data);
+                                    alert("data : " + data);
                                     if(data == 'ok'){
                                       document.getElementById('server').style.display = 'block';
                                       $("#server").html("Registration success.You will be redirected to the login page.");
