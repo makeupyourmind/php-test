@@ -50,6 +50,13 @@ try {
     $mail->Username   = "marinanov040167@gmail.com";  // GMAIL username
     $mail->Password   = "marinanov";
 
+    $mail->setFrom('nikitosnov@gmail.com', 'Mailer');
+    $mail->addAddress('nikitosnov@gmail.com', 'Joe User');     // Add a recipient
+    $mail->addAddress('nikitosnov@gmail.com');               // Name is optional
+    $mail->addReplyTo('nikitosnov@gmail.com', 'Information');
+    $mail->addCC('nikitosnov@gmail.com');
+    $mail->addBCC('nikitosnov@gmail.com');
+
     $mail->send();
     echo 'Message has been sent';
 } catch (Exception $e) {
