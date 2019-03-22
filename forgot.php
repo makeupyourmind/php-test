@@ -35,7 +35,7 @@ $link = pg_connect("host=$host
 			  $sg = new \SendGrid($apiKey);
 
 
-			  $response = $sg->client->mail()->send()->post($mail);
+			  //$response = $sg->client->mail()->send()->post($mail);
 
  	    }
  	    else {
