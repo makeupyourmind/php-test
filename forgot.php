@@ -18,7 +18,8 @@ $link = pg_connect("host=$host
  	    if($row != ''){
 
         //$name = $_POST['name'];
-			  /*$from = "marinanov040167@gmail.com";
+        echo "ok";
+			  $from = "marinanov040167@gmail.com";
 			  $message = "Your password is : $row[1]";
 			  $to = $_POST['email'];
 
@@ -34,8 +35,8 @@ $link = pg_connect("host=$host
 			  $sg = new \SendGrid($apiKey);
 
 
-			  $response = $sg->client->mail()->send()->post($mail);*/
-				echo "ok";
+			  $response = $sg->client->mail()->send()->post($mail);
+
  	    }
  	    else {
  	      echo "error";
