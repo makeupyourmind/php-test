@@ -32,7 +32,7 @@ $link = pg_connect("host=$host
 			  $message = "Your verification code : $code";
 			  /*Content*/
 			  $from = new SendGrid\Email($name,$from);
-			  $subject = "SUBJECT";
+			  $subject = "Confirm your Email";
 			  $to = new SendGrid\Email("", $to);
 			  $content = new SendGrid\Content("text/html", $message);
 
