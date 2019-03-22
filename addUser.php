@@ -20,7 +20,7 @@ $link = mysqli_connect($host, $user, $password, $database)
  	      //echo "ok";
 				$code = mt_rand(5, 100);
 			   //echo $code;
-			  $name = "";
+			  /*$name = "";
 			  $from = "";
 			  $subject = "";
 			  $message = "";
@@ -32,7 +32,28 @@ $link = mysqli_connect($host, $user, $password, $database)
 			  $headers = "From: $from\r\nReply-to: $from";
 			  mail($to, $subject, $message, $headers);
 				echo $code;
-				exit;
+				exit;*/
+				require_once ('SendGrid-API/vendor/autoload.php');
+			  $name = $_POST['name'];
+			  $from = "marinanov040167@gmail.com";
+			  $subject = $_POST['subject'];
+			  $message = $_POST['message'];
+			  $to = $_POST['email'];
+			  $message = "Your verification code : $code";
+			  /*Content*/
+			  $from = new SendGrid\Email($name,$from);
+			  $subject = "SUBJECT";
+			  $to = new SendGrid\Email("", $to);
+			  $content = new SendGrid\Content("text/html", $message);
+
+			  /*Send the mail*/
+			  $mail = new SendGrid\Mail($from, $subject, $to, $content);
+			  $apiKey = getenv('SENDGRID_API_KEY');
+			  $sg = new \SendGrid($apiKey);
+
+			  /*Response*/
+			  $response = $sg->client->mail()->send()->post($mail);
+				echo $code;
  	    }
 
  	}
