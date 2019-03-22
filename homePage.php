@@ -494,7 +494,7 @@
     type : 'POST',
     dataType : 'JSON',
     success: function(data){
-        alert("data from searchPhotoToSet : "  + data);
+        //alert("data from searchPhotoToSet : "  + data);
         $("#lengthOfArrayPhoto").html(data.length);
          $('#AvatarOnly').attr('src', path + data[n]);
          $('#getPhotoUser').attr('src', path + data[n]);
@@ -524,7 +524,7 @@ alert("last : " + last);
          type: 'POST',
          dataType : 'JSON',//для получения ответа норм.........................................
          success: function(data){
-              alert("uploadPhoto : "  + data);
+              //alert("uploadPhoto : "  + data);
                $('#AvatarOnly').attr('src', path + data);
 
            }
@@ -545,7 +545,7 @@ alert("last : " + last);
  //alert("last : " + last);
  $.post('deleteAccount.php', {'name': last },
          function(data) {
-              alert(data);
+              //alert(data);
                if(data == 'ok'){
                  alert("Your account has been deleted");
                  window.location.href = 'index.php';
@@ -566,7 +566,7 @@ alert("last : " + last);
       //alert("last : " + last);
       $.post('getDataUser.php', {'name': last },
               function(data) {
-                     alert("data from document ready : " + data);
+                     //alert("data from document ready : " + data);
                      var str = data;
                      var index = str.indexOf(" ");
                      var first = str.substr(0, index);
