@@ -190,16 +190,17 @@
 
   <script>
   $("#myForm").submit(function(event) {
-    alert("ok");
+    //alert("ok");
     event.preventDefault();
               if($('#email').val() == ''){
                 $("#server").html("Enter data");
-                alert("b");
+                //alert("b");
                 return false;
               }
 
-              /*$.post('forgot.php', {'email':$('#email').val()},
+              $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
+                        alert("ok");
                             alert(data[1]);
                             if(data != 'error'){
                               $("#server2").html("You receive on this email your password");
@@ -208,7 +209,7 @@
                               $("#server").html("This email is incorrect");
                             }
 
-                      });*/
+                      });
               });
   </script>
 
