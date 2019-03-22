@@ -191,11 +191,12 @@
   <script>
   $("#myForm").submit(function(event) {
     alert("ok");
+    event.preventDefault();
               if($('#email').val() == ''){
                 $("#server").html("Enter data");
                 return false;
               }
-              event.preventDefault();
+
               $.post('forgot.php', {'email':$('#email').val()},
                       function(data) {
                             alert(data[1]);
