@@ -7,7 +7,7 @@
   <style>
 
    body{
-    background: url('/public/background.jpg');
+    background: url('/public/91.jpg');
     font-family: Roboto,sans-serif;
     background-size: auto auto;
     margin: 0;
@@ -18,7 +18,7 @@
     font-weight: 300;
    }
 
-   .container{
+  /* .container{
      background-color: rgba(0,0,0,.7);
      width: 100%;
      position: absolute;
@@ -26,14 +26,14 @@
      left: 0;
      right: 0;
      bottom: 0;
-   }
+   }*/
 
    .header{
      height: 60px;
      width: 100%;
      background-color: #000;
-     position: absolute;
-     z-index: 1;
+     /*position: absolute;
+     z-index: 1;*/
    }
 
    a{

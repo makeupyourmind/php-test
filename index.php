@@ -19,22 +19,10 @@
     font-weight: 300;
    }
 
-   /*.container{
-     background-color: rgba(0,0,0,.7);
-     width: 100%;
-     position: absolute;
-     top: 0;
-     left: 0;
-     right: 0;
-     bottom: 0;
-   }*/
-
    .header{
      height: 60px;
      width: 100%;
      background-color: #000;
-     /*position: absolute;
-     z-index: 1;*/
    }
 
    a{
@@ -64,7 +52,7 @@
      width: 400px;
      margin: 9% auto;
      text-align: center;
-     color: #fff;
+     color: #454252;
      font-size: 1.4rem;
    }
 
@@ -72,7 +60,7 @@
      width: 450px;
      margin: 0 auto;
      text-align: center;
-     color: #fff;
+     color: #454252;
      font-size: 1rem;
    }
 
@@ -99,7 +87,7 @@
         </div>
       </div>
     </div>
-    
+
       <div class="hi">
         <h2>Welcome to our site</h2>
       </div>
