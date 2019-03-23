@@ -7,7 +7,7 @@
   <style>
 
       body{
-       background: url('/public/background.jpg');
+       background: url('/public/91.jpg');
        font-family: Roboto,sans-serif;
        background-size: auto auto;
        margin: 0;
@@ -18,7 +18,7 @@
        font-weight: 300;
       }
 
-      .container{
+      /*.container{
         background-color: rgba(0,0,0,.7);
         width: 100%;
         position: absolute;
@@ -26,14 +26,14 @@
         left: 0;
         right: 0;
         bottom: 0;
-      }
+      }*/
 
       .header{
         height: 60px;
         width: 100%;
         background-color: #000;
-        position: absolute;
-        z-index: 1;
+        /*position: absolute;
+        z-index: 1;*/
       }
 
       a{
@@ -68,7 +68,7 @@
       .form p{
         text-align: center;
         font-size: 1.5rem;
-        color: #fff;
+        color: #454252;
       }
 
       .md-form {
@@ -88,7 +88,7 @@
        font-size: 16px;
        outline: 0;
        margin-left: 10px;
-       color: #696969;
+       color: #272626;
       }
 
       input:active, input:focus{
@@ -97,7 +97,7 @@
          border-left: 0px solid grey;
          border-right: 0px solid grey;
          border-bottom: 2px solid #4285f4;
-         color: #696969;
+         color: #272626;
        }
 
        .btn{
@@ -140,7 +140,7 @@
      }
 
      .remind{
-        color: #007bff;
+        color: #0f1b27;
         margin-right: 12px;
      }
 
@@ -210,6 +210,13 @@
        margin: 5px 90px 0 0;
      }
 
+     ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+     color: #272626;
+    }
+
+     ::-moz-placeholder { /* Firefox 19+ */
+       color: #272626;
+     }
   </style>
 
 </head>
