@@ -20,8 +20,8 @@
         height: 60px;
         width: 100%;
         background-color: #000;
-        position: absolute;
-        z-index: 1;
+        /*position: absolute;
+        z-index: 1;*/
       }
 
       .container{
