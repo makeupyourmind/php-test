@@ -18,22 +18,10 @@
        font-weight: 300;
       }
 
-      /*.container{
-        background-color: rgba(0,0,0,.7);
-        width: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-      }*/
-
       .header{
         height: 60px;
         width: 100%;
         background-color: #000;
-        /*position: absolute;
-        z-index: 1;*/
       }
 
       a{
@@ -145,7 +133,7 @@
      }
 
      .term{
-       color: #007bff;
+       color: #0f1b27;
      }
 
      .checkbox{
