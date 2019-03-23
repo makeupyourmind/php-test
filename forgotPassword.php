@@ -202,6 +202,7 @@
                               $("#server2").html("You receive on this email your password");
                               setTimeout(function(){ $('#server2').hide(); }, 3000);
                               setTimeout(function(){ $('#server2').show(); }, 500);
+                              setTimeout(function(){ window.location.href = 'logIn.php'; }, 3000);
                             }
                             else {
                               $("#server").css("display","block");

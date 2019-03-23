@@ -70,7 +70,7 @@
        width: 600px;
        background-color: #fff;
        margin: 0 auto;
-       height: 600px;
+       height: 500px;
        border-radius: 10px;
      }
 
@@ -200,7 +200,7 @@
 
      .closeView{
        width: 200px;
-       margin-left: 5px;
+       margin-left: 100px;
      }
 
      .view{
