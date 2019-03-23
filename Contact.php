@@ -14,6 +14,7 @@
         font-family: Roboto,sans-serif;
         background-size: cover;
         margin: 0;
+        background-repeat: no-repeat;
       }
 
       .header{

@@ -11,6 +11,7 @@
     font-family: Roboto,sans-serif;
     background-size: cover;
     margin: 0;
+    background-repeat: no-repeat;
    }
 
    h1, h2, h3, h4, h5, h6 {
