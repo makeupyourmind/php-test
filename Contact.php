@@ -51,7 +51,7 @@
         width: 110px;
         float: left;
         text-align: center;
-        margin: 4% auto;
+        margin: 4% auto 0 auto;
       }
 
       .a a:hover{
@@ -60,7 +60,7 @@
 
       .form{
         width: 480px;
-        margin: 10% auto;
+        margin: 10% auto 0 auto;
       }
 
       .wrap{

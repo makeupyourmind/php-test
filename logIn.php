@@ -62,7 +62,7 @@
    .form {
     width: 400px;
     height: 400px;
-    margin: 12% auto;
+    margin: 12% auto 0 auto;
    }
 
    .form p{
