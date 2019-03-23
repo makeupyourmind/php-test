@@ -27,6 +27,7 @@
       .container{
         background-color: rgba(0,0,0,.7);
         width: 100%;
+        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -58,7 +59,7 @@
 
       .form{
         width: 480px;
-        margin: 5% auto 0 auto;
+        margin: 7% auto 0 auto;
       }
 
       .wrap{
