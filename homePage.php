@@ -30,16 +30,6 @@
       font-weight: 300;
      }
 
-     .container{
-       background-color: rgba(0,0,0,.7);
-       width: 100%;
-       height: 100%;
-       top: 0;
-       left: 0;
-       right: 0;
-       bottom: 0;
-     }
-
      .header{
        height: 60px;
        width: 100%;
@@ -231,8 +221,6 @@
    </head>
    <body>
 
-     <!--<div class="container">-->
-
        <div class="header">
          <div class="link">
            <div class="a">
@@ -291,18 +279,7 @@
             <input type="file" id = "pic" name="pic">
          </div>
 
-         <!--<div id = "fileHide" class="file">
-            <input type="file" id = "pic" name="pic">
-         </div>-->
 
-
-         <!--<div id = "fileHide" class="file">
-            <input type="file" id = "pic" name="pic">
-         </div>-->
-
-      <!--<div id = "fileHide" class="file">
-        <input type="file" id = "pic" name="pic">
-      </div>-->
       <div id = "hideButton">
         <div class="buttonSet"><button type = "submit" name = "SetPhoto" class="btn" id = "file">Set photo</button></div>
       </div>
@@ -332,10 +309,6 @@
 
 
  </div><!--End div info and home-->
-
-
-
-     <!--</div>End container-->
 
 
  <!--Start scripts-->

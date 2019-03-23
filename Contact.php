@@ -24,16 +24,6 @@
         z-index: 1;*/
       }
 
-      .container{
-        background-color: rgba(0,0,0,.7);
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-      }
-
       a{
         text-decoration: none;
         cursor: pointer;
@@ -203,7 +193,7 @@
         </div>
       </div>
     </div>
-  <!--<div class="container">-->
+
     <div class="form">
       <div class="contact">
        <span>Send Us A Message</span>
@@ -235,7 +225,7 @@
        <p id = "server2"></p>
      </div>
     </div>
-  <!--</div>-->
+
 
   <script>
   $("#myForm").submit(function(event) {
