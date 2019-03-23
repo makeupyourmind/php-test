@@ -154,7 +154,6 @@
      .buttonSet{
        width: 250px;
        float: right;
-       margin-top: 10px;
      }
 
      .buttonDel{
