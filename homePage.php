@@ -365,6 +365,7 @@ $('#closeView').click(function (event){
       $('#test').html(n);
       if(n >= $('#lengthOfArrayPhoto').html()){
         n = 0;
+        $('#test').text(n);
       }
 
    })
