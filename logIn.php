@@ -9,7 +9,7 @@
    body{
     background: url('/public/91.jpg');
     font-family: Roboto,sans-serif;
-    background-size: auto auto;
+    background-size: cover;
     margin: 0;
     background-repeat: no-repeat;
    }
@@ -117,7 +117,7 @@
     }
 
     .remind{
-       color: #0f1b27;
+       color: #d5a8f3;
        margin-right: 12px;
     }
 

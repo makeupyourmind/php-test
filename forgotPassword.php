@@ -9,7 +9,7 @@
    body{
     background: url('/public/91.jpg');
     font-family: Roboto,sans-serif;
-    background-size: auto auto;
+    background-size: cover;
     margin: 0;
     background-repeat: no-repeat;
    }
