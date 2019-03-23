@@ -72,7 +72,7 @@
 
     .info{
       width: 200px;
-      margin: 2% auto 0 auto;
+      margin: 4% auto 0 auto;
       font-size: 22px;
       color: #827FFE;
       text-align: center;
