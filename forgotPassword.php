@@ -22,7 +22,7 @@
      background-color: rgba(0,0,0,.7);
      width: 100%;
      position: absolute;
-     top: 60px;
+     top: 0px;
      left: 0;
      right: 0;
      bottom: 0;

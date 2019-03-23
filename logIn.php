@@ -11,7 +11,7 @@
     font-family: Roboto,sans-serif;
     background-size: auto auto;
     margin: 0;
-    background-repeat: no-repeat; 
+    background-repeat: no-repeat;
    }
 
    h1, h2, h3, h4, h5, h6 {
@@ -22,6 +22,7 @@
      background-color: rgba(0,0,0,.7);
      width: 100%;
      position: absolute;
+     top: 0;
      left: 0;
      right: 0;
      bottom: 0;
