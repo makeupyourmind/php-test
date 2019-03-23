@@ -22,7 +22,6 @@
      width: 100%;
      height: 100%;
      position: absolute;
-     top: 60px;
      left: 0;
      right: 0;
      bottom: 0;
@@ -32,6 +31,8 @@
      height: 60px;
      width: 100%;
      background-color: #000;
+     position: absolute;
+     z-index: 1;
    }
 
    a{
@@ -195,7 +196,7 @@
 
     <p id = "server"><p></div>
    </div>
-  
+
 
 <script>
 $("#myForm").submit(function(event) {
