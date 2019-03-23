@@ -9,7 +9,7 @@
    body{
     background: url('/public/background.jpg');
     font-family: Roboto,sans-serif;
-    background-size: cover;
+    background-size: auto auto;
     margin: 0;
    }
 
@@ -180,7 +180,7 @@
         <input autofocus type="text" id = "name" name="name" placeholder="Your name">
       </div>
       <div class="md-form">
-        <input type="text" id = "password" name="password" placeholder="Your password">
+        <input type="password" id = "password" name="password" placeholder="Your password">
       </div>
         <div class="text">
           <a class="remind" href="/forgotPassword.php">Forgot password?</a>
@@ -195,9 +195,7 @@
 
     <p id = "server"><p></div>
    </div>
-  </div>
-
-
+  
 
 <script>
 $("#myForm").submit(function(event) {

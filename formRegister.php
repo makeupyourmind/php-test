@@ -256,7 +256,7 @@
         <input autofocus type="text" id = "name" name="name" placeholder="Your name">
       </div>
       <div class = "md-form">
-        <input type="text" id = "password" name="password" placeholder="Your password">
+        <input type="password" id = "password" name="password" placeholder="Your password">
       </div>
       <div class = "md-form">
         <input type="text" id = "email" name="email" placeholder="Your Email">
