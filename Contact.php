@@ -27,7 +27,6 @@
       .container{
         background-color: rgba(0,0,0,.7);
         width: 100%;
-        height: 100%;
         position: absolute;
         top: 0;
         left: 0;
@@ -175,6 +174,10 @@
        font-size: 16px;
        padding: 4px 0;
        margin-top: 10px;
+     }
+
+     .fa{
+       padding: 6px;
      }
     </style>
 
