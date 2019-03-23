@@ -531,7 +531,7 @@ $('#closeView').click(function (event){
      success: function(data){
        $('#count').text(data[n]);
          //alert("data from searchPhotoToSet : "  + data);
-         $("#lengthOfArrayPhoto").html(data.length);
+         $("#lengthOfArrayPhoto").html(data.length - 1);
           $('#AvatarOnly').attr('src', path + data[n]);
           $('#getPhotoUser').attr('src', path + data[n]);
       }
