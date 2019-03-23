@@ -174,7 +174,7 @@
       </div>
     </div>
   </div>
-  <div class="container">
+
     <div class="form">
     <p>Log in</p>
     <form id = "myForm">
@@ -196,7 +196,7 @@
     </div>
 
     <p id = "server"><p></div>
-   </div>
+
 
 
 <script>
