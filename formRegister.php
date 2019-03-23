@@ -275,6 +275,14 @@
 </div>
 
 <script>
+
+$(document).ready(function(){
+  $('#name').focus();
+})
+
+</script>
+
+<script>
 $("#myForm").submit(function(event) {
 
             // Предотвращаем обычную отправку формы
