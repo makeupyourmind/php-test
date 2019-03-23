@@ -193,6 +193,7 @@
               if($('#email').val() == ''){
                 $("#server").css("display","block");
                 $("#server").html("Enter data");
+                document.querySelector('#email').value = '';
                 setTimeout(function(){ $('#server').hide(); }, 3000);
                 setTimeout(function(){ $('#server').show(); }, 500);
                 return false;
@@ -210,6 +211,7 @@
                             else {
                               $("#server").css("display","block");
                               $("#server").html("This email is incorrect");
+                              document.querySelector('#email').value = '';
                               setTimeout(function(){ $('#server').hide(); }, 3000);
                               setTimeout(function(){ $('#server').show(); }, 500);
                             }

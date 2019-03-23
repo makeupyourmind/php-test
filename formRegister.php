@@ -287,13 +287,11 @@ $("#myForm").submit(function(event) {
             {
               document.getElementById('note').style.display = 'block';
               $("#note").html("Enter data");
-              //setTimeout(function(){ $('#note').hide(); }, 3000);
-              //setTimeout(function(){ $('#note').show(); }, 500);
+              setTimeout(function(){ $('#note').hide(); }, 3000);
+              setTimeout(function(){ $('#note').show(); }, 500);
               return false;
             }
-            //$("#form").css("display", "none");
-            //document.getElementById('confirmForm').style.display = 'block';
-            //$('#confirm').focus();
+
             event.preventDefault();
 
             $.post('addUser.php', {'name':$('#name').val(), 'password':$('#password').val(), 'email':$('#email').val() },
@@ -316,6 +314,7 @@ $("#myForm").submit(function(event) {
                                     }
                                     else {
                                       document.getElementById('server2').style.display = 'block';
+                                      document.querySelector('#confirm').value = '';
                                       $("#server2").html("Enter data or Error code");
                                       setTimeout(function(){ $('#server2').hide(); }, 3000);
                                       setTimeout(function(){ $('#server2').show(); }, 500);
@@ -326,56 +325,11 @@ $("#myForm").submit(function(event) {
                           else {
                             document.getElementById("note").style.display = 'block';
                             $("#note").html("User name is token");
+                            document.querySelector('#name').value = '';
                             setTimeout(function(){ $('#note').hide(); }, 3000);
                             setTimeout(function(){ $('#note').show(); }, 500);
                           }
                     });
-            /*$.post('confirmEmail.php', {'email':$('#email').val() },
-                    function(data) {
-                          alert(data);
-                          $( "#proof" ).click(function() {
-                            //alert($('#confirm').val());
-                            if($('#confirm').val() != '' && $('#confirm').val() == data)
-                            {
-                            event.preventDefault();
-                            $.post('addUser.php', {'name':$('#name').val(), 'password':$('#password').val(), 'email':$('#email').val() },
-                                    function(data) {
-                                          alert(data);
-                                          if(data == 'ok')
-                                          {
-                                            $("#server2").html("Registration success.You will be redirected to the login page.");
-                                            setTimeout(function(){ window.location.href = 'homePage.php'; }, 3000);
-                                          }
-                                          else {
-                                            $("#server").html("User name is token");
-                                            setTimeout(function(){ $('#server').hide(); }, 3000);
-                                          }
-                                    });
-                            }
-                            else {
-                              alert("Error Code");
-                            }
-
-                          });
-              });*/
-
-            //if($('#confirm').val() != '')
-            //{
-            //event.preventDefault();
-            /*$.post('addUser.php', {'name':$('#name').val(), 'password':$('#password').val(), 'email':$('#email').val() },
-                    function(data) {
-                          alert(data);
-                          if(data == 'ok')
-                          {
-                            $("#server").html("Thank you");
-                            setTimeout(function(){ window.location.href = 'homePage.php'; }, 3000);
-                          }
-                          else {
-                            $("#server").html("User name is token");
-                            setTimeout(function(){ $('#server').hide(); }, 3000);
-                          }
-                    });*/
-            //}
 
       });
 </script>
