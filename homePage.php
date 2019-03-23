@@ -301,7 +301,7 @@
          <span>Your email : </span> <span id = "userEmail"></span>
           <p style = "color: red; font-size: 20px; display: none" id = "test"></p>
           <p id = "lengthOfArrayPhoto" style = "display: none"></p>
-          <p id = "count" style = "display: none" ></p>
+          <p id = "count" style = "color: red; font-size: 20px; display: none" ></p>
         </div>
     </div>
      <!--End div class bottom-->
@@ -335,6 +335,24 @@
 
    })
  </script>
+
+
+<script>
+
+$('#closeView').click(function (event){
+  event.preventDefault();
+  //alert($('#count').text());
+  var lastPhoto = $('#count').text();
+  var temp = $('#get').html();
+  var str = temp;
+  var index = str.indexOf(",");  // Gets the first index where a space occours
+  var first = str.substr(0, index); // Gets the first part
+  var last = str.substr(index + 1);  // Gets the text part
+  var path = "./users/" + last + "/";
+  $('#AvatarOnly').attr('src', path + lastPhoto);
+})
+
+</script>
 
 
  <script>
@@ -392,14 +410,9 @@
     type : 'POST',
     dataType : 'JSON',
     success: function(data){
-        //alert("data right : " + data);
+         //alert("data rigth : " + data);
          var dataSet = data;
-       //alert("$('#lengthOfArrayPhoto').html() : " + data.length);
-         /*if(!data.length){
-           n = 0;
-           alert("Я пошел сюда data.lenght : " + dataSet[n]);
-           $('#getPhotoUser').attr('src', path + dataSet[n]);
-         }*/
+         $('#count').text(data[n]);
          if(n >= data.length){
            //n = 0;
            n = data.length;
@@ -441,7 +454,7 @@
     success: function(data){
          //alert("data left : " + data);
          var dataSet = data;
-
+          $('#count').text(data[n]);
          $('#getPhotoUser').attr('src', path + dataSet[n]);
          //alert("data left index : " + dataSet[n]);
      }
@@ -468,18 +481,19 @@
        if(data == ''){
          alert("You have no photos");
        }
-       //alert("i want to del");
-         var getID = $('#test').html();
-         var namePhotoToDel = data[getID];
+
+         //var getID = $('#test').html();
+         //var namePhotoToDel = data[getID];
+         var getID = $('#count').text();
+         var namePhotoToDel = getID;
+
            $.ajax({
            url : '/deletePhotoUser.php',
            type : 'POST',
            data: ({temp: namePhotoToDel}),
            dataType: "JSON",
            success: function(data){
-                //alert("data id delPhoto : " + data);
-                //alert("data id to set after del : " + data[0]);
-                //alert("data lenght : " + data.length);
+                $('#count').text(data[0]);
                  $('#getPhotoUser').attr('src', path + data[0]);
                  $('#AvatarOnly').attr('src', path + data[0]);
                  n = 0;
@@ -515,6 +529,7 @@
      type : 'POST',
      dataType : 'JSON',
      success: function(data){
+       $('#count').text(data[n]);
          //alert("data from searchPhotoToSet : "  + data);
          $("#lengthOfArrayPhoto").html(data.length);
           $('#AvatarOnly').attr('src', path + data[n]);
@@ -547,7 +562,8 @@
           success: function(data){
                //alert("uploadPhoto : "  + data);
                 $('#AvatarOnly').attr('src', path + data);
-
+                $('#getPhotoUser').attr('src', path + data);
+                $('#count').text(data);
             }
       })
 
