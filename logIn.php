@@ -129,7 +129,7 @@
     }
 
     .remind{
-       color: #007bff;
+       color: #0f1b27;
        margin-right: 12px;
     }
 
@@ -150,6 +150,14 @@
       font-size: 16px;
       padding: 4px 0;
       margin-top: 10px;
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #272626;
+   }
+
+    ::-moz-placeholder { /* Firefox 19+ */
+      color: #272626;
     }
   </style>
 
