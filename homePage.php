@@ -301,16 +301,18 @@
    </div>
 
  </div>
- <div class="bottom"><div id = "inf" class = "inf">
-   <span>Your name : </span> <span id = "userName"></span>
-   <br>
-  <span>Your password : </span> <span id = "userPassword"></span>
-   <br>
-  <span>Your email : </span> <span id = "userEmail"></span>
-   <p style = "color: red; font-size: 20px; display: none" id = "test"></p>
-   <p id = "lengthOfArrayPhoto" style = "display: none"></p>
-   <p id = "count" style = "display: none" ></p>
-</div></div>
+ <div class="bottom">
+   <div id = "inf" class = "inf">
+     <span>Your name : </span> <span id = "userName"></span>
+     <br>
+    <span>Your password : </span> <span id = "userPassword"></span>
+     <br>
+    <span>Your email : </span> <span id = "userEmail"></span>
+     <p style = "color: red; font-size: 20px; display: none" id = "test"></p>
+     <p id = "lengthOfArrayPhoto" style = "display: none"></p>
+     <p id = "count" style = "display: none" ></p>
+   </div>
+</div>
 
 <script>
 
@@ -568,7 +570,7 @@ alert("last : " + last);
       //alert("last : " + last);
       $.post('getDataUser.php', {'name': last },
               function(data) {
-                     //alert("data from document ready : " + data);
+                     alert("data from document ready : " + data);
                      var str = data;
                      var index = str.indexOf(" ");
                      var first = str.substr(0, index);
