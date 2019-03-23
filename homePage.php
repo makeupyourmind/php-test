@@ -20,7 +20,7 @@
     body{
      background: url('/public/background.jpg');
      font-family: Roboto,sans-serif;
-     background-size: cover;
+     background-size: auto auto;
      margin: 0;
      background-repeat: no-repeat;
     }
