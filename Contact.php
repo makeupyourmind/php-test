@@ -9,7 +9,7 @@
     <style>
 
       body {
-        background: url('/public/background.jpg');
+        background: url('/public/91.jpg');
         font-family: Roboto,sans-serif;
         background-size: auto auto;
         margin: 0;
@@ -203,7 +203,7 @@
         </div>
       </div>
     </div>
-  <div class="container">
+  <!--<div class="container">-->
     <div class="form">
       <div class="contact">
        <span>Send Us A Message</span>
@@ -235,7 +235,7 @@
        <p id = "server2"></p>
      </div>
     </div>
-  </div>
+  <!--</div>-->
 
   <script>
   $("#myForm").submit(function(event) {
