@@ -219,7 +219,8 @@ $("#myForm").submit(function(event) {
                           if(data == 'not found')
                           {
                             $("#server").html("Username or Password is incorrect");
-                            $('#myForm')[0].reset();
+                            document.querySelector('#name').value = '';
+                            document.querySelector('#password').value = '';
                             setTimeout(function(){ $('#server').hide(); }, 3000);
                             setTimeout(function(){ $('#server').show(); }, 500);
                           }
