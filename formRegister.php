@@ -147,6 +147,10 @@
        width: 100%;
      }
 
+     #confirm{
+       text-align: center;
+     }
+
      .full{
        margin: 3% auto;
        width: 400px;
