@@ -52,7 +52,7 @@
      width: 400px;
      margin: 9% auto;
      text-align: center;
-     color: #454252;
+     color: #190861;
      font-size: 1.4rem;
    }
 
@@ -60,7 +60,7 @@
      width: 450px;
      margin: 0 auto;
      text-align: center;
-     color: #454252;
+     color: #190861;
      font-size: 1rem;
    }
 
