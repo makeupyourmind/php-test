@@ -216,11 +216,11 @@ $("#myForm").submit(function(event) {
                           var index = str.indexOf(" ");  // Gets the first index where a space occours
                           var first = str.substr(0, index); // Gets the first part
                           var last = str.substr(index + 1);  // Gets the text part
-                          //alert("first : " + first);
-                          //alert("last : " + last);
                           if(data == 'not found')
                           {
                             $("#server").html("Username or Password is incorrect");
+                            $('#name').val('');
+                            $('#password').val('');
                             setTimeout(function(){ $('#server').hide(); }, 3000);
                             setTimeout(function(){ $('#server').show(); }, 500);
                           }

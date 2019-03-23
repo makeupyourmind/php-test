@@ -576,7 +576,9 @@ alert("last : " + last);
                      var first = str.substr(0, index);
                      var second = str.substr(index + 1, index + 1);
                      var last = str.substr(index + 2);
-
+                     alert("fisrt : " + first);
+                     alert("second : " + second);
+                     alert("last : " + last);
                      document.querySelector('#userName').innerHTML = first;
                      document.querySelector('#userPassword').innerHTML = second;
                      document.querySelector('#userEmail').innerHTML = last;
