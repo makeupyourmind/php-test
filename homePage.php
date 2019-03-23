@@ -73,7 +73,7 @@
        width: 200px;
        margin: 4% auto 0 auto;
        font-size: 22px;
-       color: #827FFE;
+       color: #23224c;
        text-align: center;
      }
 

@@ -95,7 +95,7 @@
         background: #fff;
         border-radius: 31px;
         font-size: 18px;
-        color: #8f8fa1;
+        color: #363636;
         line-height: 1.2;
         font-family: Roboto,sans-serif;
       }
