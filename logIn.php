@@ -68,7 +68,7 @@
    .form p{
      text-align: center;
      font-size: 1.5rem;
-     color: #fff;
+     color: #454252;
    }
 
    .md-form {
@@ -88,7 +88,7 @@
     font-size: 16px;
     outline: 0;
     margin-left: 10px;
-    color: #696969;
+    color: #272626;
    }
 
    input:active, input:focus{
@@ -97,7 +97,7 @@
       border-left: 0px solid grey;
       border-right: 0px solid grey;
       border-bottom: 2px solid #4285f4;
-      color: #696969;
+      color: #272626;
     }
 
     .text{
