@@ -19,7 +19,11 @@ $link = pg_connect("host=$host
     }
 
     rmdir("./users/$name");
-
+    session_start();
+    // Unset все переменные сессии.
+    session_unset();
+    // Наконец, разрушить сессию.
+    session_destroy();
  	  echo "ok";
  }
 
