@@ -201,13 +201,13 @@
       <div class="block">
        <form id = "myForm" class="send">
           <div class="wrap">
-            <input autofocus class="input" id = "name" type="text" name="name" placeholder="Your name">
+            <input autocomplete="off" autofocus class="input" id = "name" type="text" name="name" placeholder="Your name">
           </div>
           <div class="wrap">
-            <input class="input" id = "email" type="email" name="email" placeholder="Your email">
+            <input autocomplete="off" class="input" id = "email" type="email" name="email" placeholder="Your email">
           </div>
           <div class="wrap">
-            <input class="input" id = "subject" type="text" name="subject" placeholder="Your subject">
+            <input autocomplete="off" class="input" id = "subject" type="text" name="subject" placeholder="Your subject">
           </div>
 
           <div class="">

@@ -171,7 +171,7 @@
     <p>Enter Email that you used to register</p>
     <form id = "myForm">
        <div class="md-form">
-        <input autofocus type="email" id = "email" name="email" placeholder="Your email">
+        <input autocomplete="off" autofocus type="email" id = "email" name="email" placeholder="Your email">
       </div>
         <div class="log">
           <button class="btn" id = "Enter" type="submit">Get Password</button>
