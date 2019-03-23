@@ -74,7 +74,7 @@
       text-align: center;
       font-weight: bold;
       font-size: 30px;
-      color: #9791b7;
+      color: #454252;
       text-transform: uppercase;
       }
 
