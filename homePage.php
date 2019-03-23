@@ -571,19 +571,20 @@ alert("last : " + last);
       $.post('getDataUser.php', {'name': last },
               function(data) {
                      alert("data from document ready : " + data);
-                     var str = data;
-                     var index = str.indexOf(" ");
+                     //var str = data;
+                     /*var index = str.indexOf(" ");
                      var first = str.substr(0, index);
                      index = str.indexOf(" ");
                      var second = str.substr(0, index);
                      index = str.indexOf(" ");
-                     var last = str.substr(0, index);
-                     alert("fisrt : " + first);
-                     alert("second : " + second);
-                     alert("last : " + last);
-                     document.querySelector('#userName').innerHTML = first;
-                     document.querySelector('#userPassword').innerHTML = second;
-                     document.querySelector('#userEmail').innerHTML = last;
+                     var last = str.substr(0, index);*/
+                     var str = data.split(" ");
+                     alert("fisrt : " + str[0]);
+                     alert("second : " + str[1]);
+                     alert("last : " + str[2]);
+                     document.querySelector('#userName').innerHTML = str[0];
+                     document.querySelector('#userPassword').innerHTML = str[1];
+                     document.querySelector('#userEmail').innerHTML = str[2];
 
                 });
 
