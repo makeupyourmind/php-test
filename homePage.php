@@ -576,7 +576,7 @@ alert("last : " + last);
                      var first = str.substr(0, index);
                      index = str.indexOf(" ");
                      var second = str.substr(0, index);
-                     var last = str.substr(index, index + 1);
+                     var last = str.substr(index + 1, index + 1);
                      alert("fisrt : " + first);
                      alert("second : " + second);
                      alert("last : " + last);
