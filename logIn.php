@@ -20,7 +20,6 @@
    .container{
      background-color: rgba(0,0,0,.7);
      width: 100%;
-     height: 100%;
      position: absolute;
      left: 0;
      right: 0;
@@ -61,7 +60,7 @@
    .form {
     width: 400px;
     height: 400px;
-    margin: 10% auto;
+    margin: 12% auto;
    }
 
    .form p{
