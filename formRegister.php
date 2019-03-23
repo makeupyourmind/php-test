@@ -236,7 +236,7 @@
   <div id = "confirmForm" class="confirm">
     <div class="full">
       <div class = "md-form">
-        <input autofocus type="text" id = "confirm" name="confirm" placeholder="Enter your code">
+        <input autofocus = "autofocus" type="text" id = "confirm" name="confirm" placeholder="Enter your code">
       </div>
       <div class="btn">
         <button id = "proof" class="form-btn" type="submit">confirm</button>

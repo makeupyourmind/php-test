@@ -244,6 +244,10 @@
                            document.getElementById("server").style.display = 'block';
                            $("#server").html("Your message has been sent to admin");
                            setTimeout(function(){ $('#server').hide(); }, 3000);
+                           document.querySelector('#name').value = '';
+                           document.querySelector('#email').value = '';
+                           document.querySelector('#subject').value = '';
+                           document.querySelector('#message').value = '';
                            setTimeout(function(){ $('#server').show(); }, 500);
                          }
                       });
