@@ -76,7 +76,8 @@
 
      .logOut{
        width: 100%;
-       margin: 15px 20px 0 0;
+       margin: 0 20px 0 0;
+       padding-top: 10px;
        text-align: right;
      }
 
@@ -160,10 +161,6 @@
        cursor:pointer;
        text-transform: uppercase;
      }
-
-     /*.controls{
-       height: 30px;
-     }*/
 
      i{
        color: red;
@@ -322,6 +319,26 @@
       $('#closeView').css("display", "block");
       $('#allPhoto').css("display", "block");
 
+      var temp = $('#get').html();
+      var str = temp;
+      var index = str.indexOf(",");  // Gets the first index where a space occours
+      var first = str.substr(0, index); // Gets the first part
+      var last = str.substr(index + 1);  // Gets the text part
+      var path = "./users/" + last + "/";
+      $.ajax({
+      url : '/searchPhotoToSet.php',
+      type : 'POST',
+      dataType : 'JSON',
+      success: function(data){
+          $('#getPhotoUser').attr('src', path + data[0]);
+          $("#lengthOfArrayPhoto").html(data.length);
+          $('#count').text(data[0]);
+          if(data.lenght == 0){
+            $('#count').text('');
+          }
+       }
+      });
+
   })
 
    $('#closeView').click(function(event){
@@ -333,6 +350,23 @@
      $('#imgForAvatar').css("display", "block");
      $('#closeView').css("display", "none");
 
+     var temp = $('#get').html();
+     var str = temp;
+     var index = str.indexOf(",");  // Gets the first index where a space occours
+     var first = str.substr(0, index); // Gets the first part
+     var last = str.substr(index + 1);  // Gets the text part
+     var path = "./users/" + last + "/";
+     $.ajax({
+     url : '/searchPhotoToSet.php',
+     type : 'POST',
+     dataType : 'JSON',
+     success: function(data){
+         if(data.lenght == 0){
+           $('#AvatarOnly').attr('src', '');
+         }
+      }
+     });
+
    })
  </script>
 
@@ -341,7 +375,7 @@
 
 $('#closeView').click(function (event){
   event.preventDefault();
-  //alert($('#count').text());
+
   var lastPhoto = $('#count').text();
   var temp = $('#get').html();
   var str = temp;
@@ -399,7 +433,7 @@ $('#closeView').click(function (event){
     event.preventDefault();
 
     var n = $('#test').html();
-    //alert("n left : " + n);
+
     var temp = $('#get').html();
     var str = temp;
     var index = str.indexOf(",");  // Gets the first index where a space occours
@@ -411,22 +445,22 @@ $('#closeView').click(function (event){
     type : 'POST',
     dataType : 'JSON',
     success: function(data){
-         //alert("data rigth : " + data);
+
          var dataSet = data;
          $('#count').text(data[n]);
          if(n >= data.length){
-           //n = 0;
+
            n = data.length;
            if(dataSet[n] == undefined){
              n = 0;
-             //alert("Я пошел сюда data.lenght : " + dataSet[n]);
+
              $('#getPhotoUser').attr('src', path + dataSet[n]);
            }
-           //alert("n >= data.length : " + dataSet[n]);
+
            $('#getPhotoUser').attr('src', path + dataSet[n]);
          }
          else {
-           //alert("data right index : " + dataSet[n]);
+
            $('#getPhotoUser').attr('src', path + dataSet[n]);
          }
      }
@@ -441,7 +475,7 @@ $('#closeView').click(function (event){
     event.preventDefault();
 
     var n = $('#test').html();
-    //alert("n left : " + n);
+
     var temp = $('#get').html();
     var str = temp;
     var index = str.indexOf(",");  // Gets the first index where a space occours
@@ -453,11 +487,11 @@ $('#closeView').click(function (event){
     type : 'POST',
     dataType : 'JSON',
     success: function(data){
-         //alert("data left : " + data);
+
          var dataSet = data;
           $('#count').text(data[n]);
          $('#getPhotoUser').attr('src', path + dataSet[n]);
-         //alert("data left index : " + dataSet[n]);
+
      }
     });
   })
@@ -483,8 +517,6 @@ $('#closeView').click(function (event){
          alert("You have no photos");
        }
 
-         //var getID = $('#test').html();
-         //var namePhotoToDel = data[getID];
          var getID = $('#count').text();
          var namePhotoToDel = getID;
 
@@ -494,14 +526,14 @@ $('#closeView').click(function (event){
            data: ({temp: namePhotoToDel}),
            dataType: "JSON",
            success: function(data){
+             if(data.length == 0){
+               $('#count').text('');
+             }
                 $('#count').text(data[0]);
                  $('#getPhotoUser').attr('src', path + data[0]);
                  $('#AvatarOnly').attr('src', path + data[0]);
                  n = 0;
                  $('#test').text(n);
-                 if(data.length == 0){
-                   $('#AvatarOnly').attr('src', '');
-                 }
 
               }
             });
@@ -515,10 +547,10 @@ $('#closeView').click(function (event){
  <script> /*Скрипт для установки фото при загрузки страницы*/
 
    $(document).ready(function(){
-     //alert("ok");
+
      var n = 0;
      $('#test').html(n);
-     //alert("n : " + n);
+
      var temp = $('#get').html();
      var str = temp;
      var index = str.indexOf(",");  // Gets the first index where a space occours
@@ -531,7 +563,7 @@ $('#closeView').click(function (event){
      dataType : 'JSON',
      success: function(data){
        $('#count').text(data[n]);
-         //alert("data from searchPhotoToSet : "  + data);
+
          $("#lengthOfArrayPhoto").html(data.length);
           $('#AvatarOnly').attr('src', path + data[n]);
           $('#getPhotoUser').attr('src', path + data[n]);
@@ -550,7 +582,7 @@ $('#closeView').click(function (event){
   var index = str.indexOf(",");  // Gets the first index where a space occours
   var first = str.substr(0, index); // Gets the first part
   var last = str.substr(index + 1);  // Gets the text part
- //alert("last : " + last);
+
   var path = "./users/" + last + "/";
   $.ajax({
           url: "uploadPhoto.php",
@@ -596,12 +628,12 @@ $('#closeView').click(function (event){
    <script> /*Скрипт для получения данных пользователя*/
      $(document).ready(function(){
        var temp = $('#get').html();
-       //alert('temp : ' + $('#get').text());
+
        var str = temp;
        var index = str.indexOf(",");  // Gets the first index where a space occours
        var first = str.substr(0, index); // Gets the first part
        var last = str.substr(index + 1);  // Gets the text part
-       //alert("last : " + last);
+
        $.post('getDataUser.php', {'name': last },
                function(data) {
                       var str = data.split(" ");
