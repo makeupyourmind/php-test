@@ -139,6 +139,7 @@
        text-transform: uppercase;
        font-size: 12px;
        height: 35px;
+       cursor: pointer;
      }
 
      .buttonSet{
