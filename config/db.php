@@ -2,7 +2,7 @@
 $host = getenv('HOST');
 $user = "rhkqakswlapxxs";
 $password = getenv("PASSWORD");
-$dbname = getenv("BDNAME");
+$dbname = getenv("DBNAME");
 $port = "5432";
 try{
   //Set DSN data source name
