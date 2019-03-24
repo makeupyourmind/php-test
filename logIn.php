@@ -175,10 +175,10 @@
     <p>Log in</p>
     <form id = "myForm">
        <div class="md-form">
-        <input autocomplete="off" autofocus type="text" id = "name" name="name" placeholder="Your name">
+        <input required autocomplete="off" autofocus type="text" id = "name" name="name" placeholder="Your name">
       </div>
       <div class="md-form">
-        <input autocomplete="off" type="password" id = "password" name="password" placeholder="Your password">
+        <input required autocomplete="off" type="password" id = "password" name="password" placeholder="Your password">
       </div>
         <div class="text">
           <a class="remind" href="/forgotPassword.php">Forgot password?</a>

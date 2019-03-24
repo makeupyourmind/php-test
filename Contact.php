@@ -201,17 +201,17 @@
       <div class="block">
        <form id = "myForm" class="send">
           <div class="wrap">
-            <input autocomplete="off" autofocus class="input" id = "name" type="text" name="name" placeholder="Your name">
+            <input required autocomplete="off" autofocus class="input" id = "name" type="text" name="name" placeholder="Your name">
           </div>
           <div class="wrap">
-            <input autocomplete="off" class="input" id = "email" type="email" name="email" placeholder="Your email">
+            <input required autocomplete="off" class="input" id = "email" type="email" name="email" placeholder="Your email">
           </div>
           <div class="wrap">
-            <input autocomplete="off" class="input" id = "subject" type="text" name="subject" placeholder="Your subject">
+            <input required autocomplete="off" class="input" id = "subject" type="text" name="subject" placeholder="Your subject">
           </div>
 
           <div class="">
-            <textarea class="input" id = "message" name="message" placeholder="Your message"></textarea>
+            <textarea required class="input" id = "message" name="message" placeholder="Your message"></textarea>
           </div>
           <div class="cont">
             <div class="btn">

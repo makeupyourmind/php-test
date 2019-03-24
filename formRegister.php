@@ -240,7 +240,7 @@
   <div id = "confirmForm" class="confirm">
     <div class="full">
       <div class = "md-form">
-        <input autocomplete="off" autofocus = "autofocus" type="text" id = "confirm" name="confirm" placeholder="Enter your code">
+        <input required autocomplete="off" autofocus = "autofocus" type="text" id = "confirm" name="confirm" placeholder="Enter your code">
       </div>
       <div class="btn">
         <button id = "proof" class="form-btn" type="submit">confirm</button>
@@ -254,13 +254,13 @@
     <p>Sign up</p>
     <form id = "myForm">
       <div class = "md-form">
-        <input autocomplete="off" autofocus type="text" id = "name" name="name" placeholder="Your name">
+        <input required autocomplete="off" autofocus type="text" id = "name" name="name" placeholder="Your name">
       </div>
       <div class = "md-form">
-        <input autocomplete="off" type="password" id = "password" name="password" placeholder="Your password">
+        <input required autocomplete="off" type="password" id = "password" name="password" placeholder="Your password">
       </div>
       <div class = "md-form">
-        <input autocomplete="off" type="text" id = "email" name="email" placeholder="Your Email">
+        <input required autocomplete="off" type="text" id = "email" name="email" placeholder="Your Email">
       </div>
            <input id = "checkbox" class = "checkbox" type="checkbox">
            <div class = "dvig"><a id = "term" class = "term" target = "_blank" href="/agreement.php">Accept the Terms and Conditions</a></div>
