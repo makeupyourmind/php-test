@@ -309,7 +309,7 @@ $("#myForm").submit(function(event) {
                             document.getElementById('confirmForm').style.display = 'block';
                             $('#confirm').focus();
 
-                            $( "#proof" ).sumbit(function() {
+                            $( "#proof" ).click(function() {
                             $.post('confirmEmail.php', {'name': $('#name').val(), 'password' : $('#password').val() ,
                             'email':$('#email').val(), 'confirm' : $('#confirm').val(), 'codeOne' : data},
                                     function(data) {
