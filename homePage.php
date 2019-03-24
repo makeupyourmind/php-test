@@ -167,9 +167,13 @@
      }
 
      .navig{
-       width: 30px;
+       width: 35px;
        margin: 5px auto;
        height: 25px;
+     }
+
+    .fas{
+       margin-right: 5px;
      }
 
      .file{
@@ -312,6 +316,8 @@
 
   $('#href').click(function(event){
     event.preventDefault();
+      $("#file").prop("disabled", true);
+
       $('#fileHide').css("display", "none");
       $('#href').css("display", "none");
       $('#change').html("Your photos");
@@ -343,6 +349,8 @@
 
    $('#closeView').click(function(event){
      event.preventDefault();
+      $("#file").removeAttr('disabled');
+
      $('#fileHide').css("display", "block");
      $('#href').css("display", "block");
      $('#change').html("Load avatar");
@@ -375,6 +383,8 @@
 
 $('#closeView').click(function (event){
   event.preventDefault();
+
+  $("#file").removeAttr('disabled');
 
   var lastPhoto = $('#count').text();
   var temp = $('#get').html();
