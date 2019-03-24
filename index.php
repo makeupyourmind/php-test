@@ -92,7 +92,7 @@
         <h2>Welcome to our site</h2>
       </div>
       <div class="info">
-        <h2>Example site on PHP + phpMyAdmin</h2>
+        <h2>Example site on PHP + PostgreSQL</h2>
       </div>
 
   </body>
